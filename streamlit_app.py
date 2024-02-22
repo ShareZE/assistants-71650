@@ -11,17 +11,17 @@ assistant_id = st.secrets["ASSISTANT_ID"]
 thread = client.beta.threads.create()
 
 
-st.set_page_config(page_title=f"Chat with the 71650-Finance Assistant, powered by OpenAI",
+st.set_page_config(page_title=f"Chat with the 71650-ecommerce-brand Assistant, powered by OpenAI",
                    page_icon="🦙",
                    layout="centered",
                    initial_sidebar_state="auto",
                    menu_items=None)
-st.title(f"Chat with the `71650-Finance` Assistant")
+st.title(f"Chat with the `71650-ecommerce-brand` Assistant")
 
 
 if "messages" not in st.session_state.keys():  # Initialize the chat messages history
     st.session_state.messages = [
-        {"role": "assistant", "content": f"Ask me a question about `Finance`!"}
+        {"role": "assistant", "content": f"Ask me a question about the ecommerce, such as `analysis order volume by origin`."}
     ]
 
 if prompt := st.chat_input("Your question"):  # Prompt for user input and save to chat history
